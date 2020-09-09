@@ -1,0 +1,1 @@
+Train a policy to balance a simply, physical pendulum.  Trained in modified OpenAI Gym Pendulum-v0 environment.

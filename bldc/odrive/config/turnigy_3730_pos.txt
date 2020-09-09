@@ -1,0 +1,25 @@
+2019.11.02
+
+Anticogging via odrive.
+calibration current raised to 30A
+
+
+2019.10.13
+
+Raise vel_limit to 90% encoder max (5000rpm)
+Raise current_lim to 42A, mfg max.
+
+
+2019.10.10 
+
+Raise pos_gain to 187
+
+
+2019.10.09
+
+pos_gain 180
+
+
+2019.10.08
+
+Initial.  Position control.

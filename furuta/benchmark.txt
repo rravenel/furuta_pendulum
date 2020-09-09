@@ -1,0 +1,67 @@
+Intermediate network
+
+2x32
+20	.1416 .0365 / .1418 .1418 .0367  
+100	.1369 .0350 / .1357 .1357 .0344
+200	.1362 .0346 / .1359 .1358 .0345
+
+3x32
+
+20	.1391 .0353
+50	.1366 .0345
+100	.1358 .0343
+200	.1352 .0342
+500	.1336 .0340 / .1345 .1345 .0343
+
+MSE
+
+50	.141	.0342
+100	.143	.035
+
+DeepQ---------------------------
+<fixed overspeed count bug - was probably undercounting; will impact Short runs>
+
+Up:
+***Average reward: 558.565				Short runs: 71
+***Average reward: 422.362	Average count: 77.590	Short runs: 71
+***Average reward: 539.668	Average count: 51.350	Short runs: 70
+
+Bal:
+79/26/55/24
+***Average reward: 58.442	Long runs: 25	Average count: 45.046	Completed: 17***
+***Average reward: 41.015	Long runs: 13	Average count: 30.284	Completed: 10***
+***Average reward: 69.539	Long runs: 30	Average count: 55.830	Completed: 23***
+
+
+Hybrid:
+***Average reward: 87.156	Long runs: 49	Complete: 0
+***Average reward: 116.430	Long runs: 47	Complete: 0
+***Average reward: 130.095	Long runs: 48	Complete: 0
+***Average reward: 749.240	Long runs: 49	Complete: 0
+
+
+PPO1----------------------------------------
+
+No network:
+
+Up:
+***Average reward: 890.189	Average count: 60.130	Short runs: 38
+
+Bal:
+***Average reward: 6.387	Long runs: -19	Average count: 8.002	Completed: 0***
+
+Hybrid:
+***Average reward: 158.083	Long runs: 41	Complete: 49
+
+
+
+22/35/23/0/66
+150,000 - 2min
+***Average reward: 4.339 Long runs: 0 Average count: 2.500 Completed: 0 Overspeed: 0***
+300,000 - 3:40
+***Average reward: 5.977 Long runs: 2 Average count: 7.606 Completed: 0 Overspeed: 15***
+500,000 - 6min
+***Average reward: 6.689 Long runs: 0 Average count: 8.462 Completed: 0 Overspeed: 13***
+
+
+

@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Ignore backup files
+*.*~
+
+# Ignore Mac detritus
+.DS_Store
+*.DS_Store

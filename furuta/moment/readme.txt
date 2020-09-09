@@ -1,0 +1,1 @@
+This folder contains a library to calculate the moments of inertia of the pendulum.

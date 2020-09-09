@@ -1,0 +1,1 @@
+This folder contains an effort to train an MLP on the motor's response to control input in the interest of velocity control.
