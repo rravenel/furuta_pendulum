@@ -2,9 +2,15 @@
 
 ![alt-text-2](media/furuta_live.gif) ![alt-text-2](media/furuta_sim.gif)
 
-This project is an educational exploration of various aspects of robotics such as motor control, simulation and machine learning.
+This project served as my introduction to Reinforcement Learning, simulation, mechatronics and control theory.
 
-The inverted pendulum was chosen as a means to motivate this exploration.  This project culminates in the construction and balancing of a rotational inverted pendulum, known as a [Furuta](https://en.wikipedia.org/wiki/Furuta_pendulum) pendulum.
+This project consists of:
+ - selection of a BLDC motor, encoders and controller
+ - assembly of a working rotary, inverted pendulum
+ - profiling the performance of the components and the assembled system
+ - developing an accurate simulation
+ - training working RL policies in simulation
+ - successfully balancing the physical pendulum
 
 ## Source Overview
 
@@ -28,7 +34,7 @@ The following aspects of motor characterization were explored:
 The following aspects of motor control were explored:
 - Control via position, velocity, torque
 - Throttle profiles: binary, linear, exponential
-- PID loop tuning and development
+- PID loop development
 
 ## Machine Learning
 
