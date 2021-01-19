@@ -9,6 +9,9 @@ import furuta_env_torque as fet
 import common as cm
 import s2r
 
+
+s2r.S2R_NETWORK = False
+
 #THROTTLE_PROFILE = [-1.0, -0.5, -0.25, -0.125, 0, 0.125, 0.25, 0.5, 1.0]
 #THROTTLE_PROFILE = [-1.0, -0.5, 0, 0.5, 1.0]
 THROTTLE_PROFILE = [-1.0, 0, 1.0]

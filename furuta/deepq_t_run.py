@@ -5,7 +5,7 @@ from stable_baselines.deepq import DQN
 import furuta_env_t_deepq as fed
 import common as cm
 
-
+POLICY_PATH = "policy/"
 ARM_TARGET_RAD = cm.deg2Rad(0)
 
 
@@ -16,7 +16,7 @@ def speedCheck(obs):
 def mainBal():
     env = fed.FurutaEnvTorqueDeepqBal(cm.RUN) 
     env.setRender(True)
-    model = DQN.load("deepq_policy_bal.zip", env)
+    model = DQN.load(POLICY_PATH + "deepq_policy_bal.zip", env)
     
     while True:
         obs, done = env.reset(), False
@@ -36,7 +36,7 @@ def mainBal():
 def mainUp():
     env = fed.FurutaEnvTorqueDeepqUp(cm.RUN) 
     env.setRender(True)
-    model = DQN.load("deepq_policy_up.zip", env)
+    model = DQN.load(POLICY_PATH + "deepq_policy_up.zip", env)
     
     while True:
         obs, done = env.reset(), False
@@ -55,8 +55,8 @@ def mainUp():
 def mainHybrid():
     env = fed.FurutaEnvTorqueDeepq(cm.RUN) 
     env.setRender(True)
-    modelBal = DQN.load("deepq_policy_bal_nn.zip", env)
-    modelUp = DQN.load("deepq_policy_up_nn.zip", env)
+    modelBal = DQN.load(POLICY_PATH + "deepq_policy_bal_nn.zip", env)
+    modelUp = DQN.load(POLICY_PATH + "deepq_policy_up_nn.zip", env)
 
     while True:
         obs, done = env.reset(), False

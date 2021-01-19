@@ -73,7 +73,7 @@ def networkStep(obs=None, err=None):
 
 def networkPredictPos(target):
     if not S2R_NETWORK:
-        return val
+        return target
     global obs_hist
     obs_hist[-1].insert(0, target)
     
@@ -187,9 +187,9 @@ def latency(arm_angle, last_arm_angle, pole_angle, last_pole_angle, step):
 def fetchSetDelay():
     if not S2R_LATENCY:
         return 0
-    return cd.SET_DELAY[np.random.randint(0, len(SET_DELAY))]
+    return cd.SET_DELAY[np.random.randint(0, len(cd.SET_DELAY))]
 
 def fetchGetDelay():
     if not S2R_LATENCY:
         return 0
-    return cd.GET_DELAY[np.random.randint(0, len(GET_DELAY))]
+    return cd.GET_DELAY[np.random.randint(0, len(cd.GET_DELAY))]
