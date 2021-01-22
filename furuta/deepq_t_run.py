@@ -14,8 +14,8 @@ def speedCheck(obs):
         print("Overspeed!")
 
 def mainBal():
-    env = fed.FurutaEnvTorqueDeepqBal(cm.RUN) 
-    env.setRender(True)
+    env = fed.FurutaEnvTorqueDeepqBal(cm.RUN, render=True) 
+    #env.setRender(True)
     model = DQN.load(POLICY_PATH + "deepq_policy_bal.zip", env)
     
     while True:
@@ -34,8 +34,8 @@ def mainBal():
 
     
 def mainUp():
-    env = fed.FurutaEnvTorqueDeepqUp(cm.RUN) 
-    env.setRender(True)
+    env = fed.FurutaEnvTorqueDeepqUp(cm.RUN, render=True) 
+    #env.setRender(True)
     model = DQN.load(POLICY_PATH + "deepq_policy_up.zip", env)
     
     while True:
@@ -53,8 +53,8 @@ def mainUp():
 
 # run bal and up policies, switching as appropriate
 def mainHybrid():
-    env = fed.FurutaEnvTorqueDeepq(cm.RUN) 
-    env.setRender(True)
+    env = fed.FurutaEnvTorqueDeepq(cm.RUN, render=True) 
+    #env.setRender(True)
     modelBal = DQN.load(POLICY_PATH + "deepq_policy_bal_nn.zip", env)
     modelUp = DQN.load(POLICY_PATH + "deepq_policy_up_nn.zip", env)
 

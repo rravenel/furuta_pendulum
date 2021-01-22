@@ -105,7 +105,7 @@ def mainUp(arg):
 def mainHybrid(arg):
     test = arg == TEST
     
-    env = fet.FurutaEnvPosPpo(cm.RUN, render = not test) 
+    env = fet.FurutaEnvPosTrpo(cm.RUN, render = not test) 
     #env.setRender(True)
     modelBal = TRPO.load(POLICY_PATH + "trpo_pos_policy_bal.zip")
     modelUp = TRPO.load(POLICY_PATH + "trpo_pos_policy_up.zip")

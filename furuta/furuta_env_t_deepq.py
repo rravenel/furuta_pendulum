@@ -18,8 +18,8 @@ THROTTLE_PROFILE = [-1.0, 0, 1.0]
         
 
 class FurutaEnvTorqueDeepq(fet.FurutaEnvTorque):
-    def __init__(self, state):
-        super(FurutaEnvTorqueDeepq, self).__init__(state=state, action_space=spaces.Discrete(3))
+    def __init__(self, state, render=False):
+        super(FurutaEnvTorqueDeepq, self).__init__(state=state, action_space=spaces.Discrete(3), render=render)
     
     def decodeAction(self, action):
         return THROTTLE_PROFILE[action]
@@ -28,8 +28,8 @@ class FurutaEnvTorqueDeepq(fet.FurutaEnvTorque):
         return math.cos(abs(cm.rad2Norm(self.pole_angle_real))) - abs(self.decodeAction(action)) * 0.01
 
 class FurutaEnvTorqueDeepqBal(FurutaEnvTorqueDeepq):
-    def __init__(self, state):
-        super(FurutaEnvTorqueDeepqBal, self).__init__(state)
+    def __init__(self, state, render=False):
+        super(FurutaEnvTorqueDeepqBal, self).__init__(state, render=render)
     
     def reset(self):
         #if self.state == feb.RUN:
@@ -76,8 +76,8 @@ class FurutaEnvTorqueDeepqBal(FurutaEnvTorqueDeepq):
 
 
 class FurutaEnvTorqueDeepqUp(FurutaEnvTorqueDeepq):
-    def __init__(self, state):
-        super(FurutaEnvTorqueDeepqUp, self).__init__(state)
+    def __init__(self, state, render=False):
+        super(FurutaEnvTorqueDeepqUp, self).__init__(state, render=render)
     
     def reset(self):
         # position 0rad is upright

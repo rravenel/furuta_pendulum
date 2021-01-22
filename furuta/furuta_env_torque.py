@@ -8,9 +8,12 @@ import common as cm
 import s2r
 
 
+
+s2r.S2R_NETWORK = False
+
 class FurutaEnvTorque(feb.FurutaEnvBase):
-    def __init__(self, state, action_space):
-        super(FurutaEnvTorque, self).__init__(state=state, action_space=action_space)
+    def __init__(self, state, action_space, render=False):
+        super(FurutaEnvTorque, self).__init__(state=state, action_space=action_space, render=render)
     
     def haze(self):
         if abs(self.pole_angle_real) > cm.deg2Rad(cm.ANGLE_TERMINAL_MAX_D):

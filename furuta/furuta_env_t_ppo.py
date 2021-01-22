@@ -8,8 +8,8 @@ import common as cm
 
 
 class FurutaEnvTorquePpo2(fet.FurutaEnvTorque):
-    def __init__(self, state):
-        super(FurutaEnvTorquePpo2, self).__init__(state=state, action_space=spaces.Box(np.array([-1]), np.array([1])))
+    def __init__(self, state, render=False):
+        super(FurutaEnvTorquePpo2, self).__init__(state=state, action_space=spaces.Box(np.array([-1]), np.array([1])), render=render)
     
     def decodeAction(self, action):
         return action

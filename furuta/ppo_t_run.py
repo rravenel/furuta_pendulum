@@ -1,13 +1,15 @@
 from stable_baselines import PPO2
 
-from furuta_env_t_ppo2 import FurutaEnvTorquePpo2
-import furuta_env_base as feb
+from furuta_env_t_ppo import FurutaEnvTorquePpo2
+import common as cm
+
+POLICY_PATH = "policy/"
 
     
 def main():
-    env = FurutaEnvTorquePpo2(feb.RUN)
-    env.setRender(True)
-    model = PPO2.load("ppo2_policy_nn.zip")
+    env = FurutaEnvTorquePpo2(cm.RUN, render=True)
+    #env.setRender(True)
+    model = PPO2.load(POLICY_PATH + "ppo2_policy_nn.zip")
 
     while True:
         obs, done = env.reset(), False
