@@ -8,7 +8,7 @@ The inverted pendulum was chosen as a means to motivate this exploration.  This 
 
 ## Source Overview
 
-/odrive
+/bldc
 - Scripts to characterize brushless DC motor control
 
 /simple
