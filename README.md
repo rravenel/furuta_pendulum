@@ -1,6 +1,6 @@
 # Furuta Pendulum
 
-![alt-text-2](media/furuta_sim.gif) ![alt-text-2](media/furuta_live.gif)
+ ![alt-text-2](media/furuta_live.gif) ![alt-text-2](media/furuta_sim.gif)
 
 This project is an educational exploration of various aspects of robotics such as motor control, simulation and machine learning.
 
